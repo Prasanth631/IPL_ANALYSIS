@@ -236,8 +236,6 @@ axes[2, 1].bar(["No Result"], [no_result_matches], color="gray")
 axes[2, 1].set_title("Matches With No Result")
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-dashboard_path = BASE / "ipl_dashboard.png"
-plt.savefig(dashboard_path, dpi=150)
 plt.show()
 
 
@@ -246,4 +244,3 @@ top_team = wins_df.iloc[0]["team"] if not wins_df.empty else "N/A"
 print("Top winning team:", top_team)
 print("Average runs per match:", round(average_runs_per_match, 2))
 print("No Result matches:", no_result_matches)
-print("Dashboard saved at:", dashboard_path)
